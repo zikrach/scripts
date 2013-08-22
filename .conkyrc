@@ -1,0 +1,130 @@
+ 
+
+
+
+# -- Conky settings -- #
+    background no
+    update_interval 5
+
+    cpu_avg_samples 2
+    net_avg_samples 2
+
+    override_utf8_locale yes
+
+    double_buffer yes
+    no_buffers yes
+
+    text_buffer_size 2048
+    imlib_cache_size 0
+
+    # -- Window specifications -- #
+
+    own_window yes
+    own_window_type normal 
+    own_window_transparent yes
+    own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+    border_inner_margin 0
+    border_outer_margin 0
+
+    minimum_size 310 310
+    maximum_width 310
+    alignment top_right
+
+    gap_x 20
+    gap_y 30
+
+    # -- Graphics settings -- #
+    draw_shades no
+    draw_outline no
+    draw_borders no
+    draw_graph_borders no
+
+    # -- Text settings -- #
+    use_xft yes
+    xftfont MaiandraGD:size=24
+    xftalpha 0.4
+
+    uppercase no
+
+    default_color 8b8b8b
+
+xftfont verdana:size=10
+alignment top_right
+gap_x 20
+gap_y 30
+xftalpha 0.8
+
+double_buffer yes
+default_outline_color 000000
+default_color ffffff
+use_spacer none
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+
+color0 White
+color1 Ivory
+color2 Ivory2
+color3 Ivory3
+color4 Tan1
+color5 Tan2
+color6 Gray
+color7 AntiqueWhite4
+color8 DarkSlateGray
+color9 Black
+
+         TEXT
+${font Ubuntu:size=54:weight=bold}${color efefef}${alignc 2}${time %H}:${time %M}
+${voffset -20}${offset 20}${font Ubuntu:size=48:weight=normal}${color efefef}${time %d}
+${offset 100}${voffset -100}${font Ubuntu:size=20:weight=normal}${color efefef}${time %A}
+${offset 100}${voffset -5}${font Ubuntu:size=20:weight=bold}${color efefef}${time %B}
+${voffset -15}${font LiberationSans:size=8}${color efefef}${alignc 5}Sunrise${offset 1}${execi 600 conkyForecast --location=UPXX0017 --datatype=SR --startday=1}${color efefef}${offset 2}|${offset 2}${color efefef}Sunset${offset 1}${execi 600 conkyForecast --location=UPXX0017 --datatype=SS --startday=1}
+##################
+##   WEATHER    ##
+##################
+${offset 10}${font Verdana:style=Bold}${color acc9dc}WEATHER ${font} ${hr 1}
+${goto 59}${font Weather:size=40}${color efefef}y${voffset -8}${font RadioSpace:size=32}${color efefef}${offset 14}${execpi 600 conkyForecast --location=UPXX0017}${font Arial:size=22}${color efefef}   ${execi 600 conkyForecast --location=UPXX0017 --datatype=OB}
+${voffset 7}${goto 20}${font ConkyWindNESW:style=Bold:size=38}${color2}${execi 600 conkyForecast --location=UPXX0017 --datatype=BS}${goto 96}${voffset -5}${font ConkyWeather:style=Bold:size=40}${color2}${execi 600 conkyForecast --location=UPXX0017 --datatype=WF}${voffset -2}${goto 180}${font MoonPhases:size=30}${color2}${execi 600 conkyForecast --location=UPXX0017 --datatype=HT}
+${voffset -20}${goto 30}${font}${color2}${execi 600 conkyForecast --location=UPXX0017 --datatype=WS}${goto 86}Feels like ${execi 600 conkyForecast --location=UPXX0017 --datatype=LT --centeredwidth=4 }${goto 182} Lunar
+${voffset 10}${goto 30}${font}${color2}${execi 600 conkyForecast --location=UPXX0017 --datatype=DW --startday=1 --shortweekday}${goto 83}${execi 600 conkyForecast --location=UPXX0017 --datatype=DW --startday=2 --shortweekday}${goto 136}${execi 600 conkyForecast --location=UPXX0017 --datatype=DW --startday=3 --shortweekday}${goto 192}${execi 600 conkyForecast --location=UPXX0017 --datatype=DW --startday=4 --shortweekday}${goto 248}${execi 600 conkyForecast --location=UPXX0017 --datatype=DW --startday=5 --shortweekday}
+${goto 20}${font}${color2}${font ConkyWeather:size=32}${execi 600 conkyForecast --location=UPXX0017 --datatype=WF --startday=1 --endday=5 --spaces=1}
+${goto 22}${voffset -30}${font}${color2}${execi 600 conkyForecast --location=UPXX0017 --datatype=HT --startday=1 --hideunits --centeredwidth=4 }/${execi 600 conkyForecast --location=UPXX0017 --datatype=LT --startday=1 --hideunits --centeredwidth=4 }${goto 76}${execi 600 conkyForecast --location=UPXX0017 --datatype=HT --startday=2 --hideunits --centeredwidth=4 }/${execi 600 conkyForecast --location=UPXX0017 --datatype=LT --startday=2 --hideunits --centeredwidth=4 }${goto 130}${execi 600 conkyForecast --location=UPXX0017 --datatype=HT --startday=3 --hideunits --centeredwidth=4 }/${execi 600 conkyForecast --location=UPXX0017 --datatype=LT --startday=3 --hideunits --centeredwidth=4 }${goto 185}${execi 600 conkyForecast --location=UPXX0017 --datatype=HT --startday=4 --hideunits --centeredwidth=4 }/${execi 600 conkyForecast --location=UPXX0017 --datatype=LT --startday=4 --hideunits --centeredwidth=4 }${goto 244}${execi 600 conkyForecast --location=UPXX0017 --datatype=HT --startday=5 --hideunits --centeredwidth=4 }/${execi 600 conkyForecast --location=UPXX0017 --datatype=LT --startday=5 --hideunits --centeredwidth=4 }
+
+${offset 10}${font Verdana:style=Bold}${color acc9dc}SYSTEM${font} ${hr 1}  
+${offset 10}${font StyleBats:size=12}i${font}${color efefef}  Kernel:  ${alignr} ${kernel}
+${offset 10}${font StyleBats:size=12}${color acc9dc}A${font}${color efefef}  CPU's av.: ${alignr} ${cpu}% ${cpubar 6,85}
+${offset 10}${font StyleBats:size=12}${color acc9dc}D${font}${color efefef}  CPU's temp: ${alignr} ${execi 300 head -c 2 /sys/class/hwmon/hwmon1/device/temp1_input}° C - ${execi 300 cat /sys/class/hwmon/hwmon1/device/fan1_input}
+${offset 10}${font StyleBats:size=12}${color acc9dc}E${font}${color efefef}  GPU's temp: ${alignr} ${execi 300 aticonfig --adapter=0 --od-gettemperature | tail -n1 | tail -c8 | head -c5}° C 
+${offset 10}${font StyleBats:size=12}${color acc9dc}g${font}${color efefef}  RAM: ${alignr} $mem/$memmax
+${offset 10}${font StyleBats:size=12}${color acc9dc}j${font}${color efefef}  SWAP: ${alignr} $swap/$swapmax
+${offset 10}${font StyleBats:size=12}${color acc9dc}q${font}${color efefef}  Uptime: ${alignr} ${uptime}
+${offset 10}${font StyleBats:size=12}${color acc9dc}B${font}${color efefef}  Start: ${alignr} ${exec systemd-analyze | cut -f2 -d=}
+${offset 10}${font StyleBats:size=12}${color acc9dc}C${font}${color efefef}  Updates: ${alignr} ${execi 300 pacman -Qu | wc -l}
+${offset 10}${font StyleBats:size=12}${color acc9dc}E${font}${color efefef}  Failed: ${alignr} ${execi 300 systemctl --failed | tail -n2 | head -c1}
+${offset 10}${font Verdana:style=Bold}${color acc9dc}PROCESSES CPU${font} ${hr 1}
+${offset 10}${color efefef}${top name 1} ${alignr} ${top cpu 1}
+${offset 10}${top name 2} ${alignr} ${top cpu 2}
+${offset 10}${top name 3} ${alignr} ${top cpu 3}
+${offset 10}${top name 4} ${alignr} ${top cpu 4}
+${offset 10}${top name 5} ${alignr} ${top cpu 5}
+${offset 10}${font Verdana:style=Bold}${color acc9dc}MEMORY USAGE${font} ${hr 1}
+${offset 10}${color efefef}${top_mem name 1}  ${alignr}  ${top_mem mem_res 1}
+${offset 10}${color efefef}${top_mem name 2}  ${alignr}  ${top_mem mem_res 2}
+${offset 10}${color efefef}${top_mem name 3}  ${alignr}  ${top_mem mem_res 3}
+${offset 10}${color efefef}${top_mem name 4}  ${alignr}  ${top_mem mem_res 4}
+${offset 10}${color efefef}${top_mem name 5}  ${alignr}  ${top_mem mem_res 5}
+${offset 10}${font Verdana:style=Bold}${color acc9dc}HDD${font} ${hr 1}
+${offset 10}${font StyleBats:size=14}J${font}${color efefef}  ${voffset -5}Root: ${offset 10}${alignr}${fs_free /}/${fs_size /}
+${offset 10}${font StyleBats:size=14}${color acc9dc}J${font}  ${voffset -5}${color efefef}Home: ${alignr}${fs_free /home}/${fs_size /home}
+${offset 10}${font StyleBats:size=14}${color acc9dc}J${font}  ${voffset -5}${color efefef}Media: ${alignr}${fs_free /media/Media}/${fs_size /media/Media}
+${offset 10}${font StyleBats:size=14}${color acc9dc}J${font}  ${voffset -5}${color efefef}Download: ${alignr}${fs_free /media/Download}/${fs_size /media/Download}
+${offset 10}${font StyleBats:size=14}${color acc9dc}J${font}  ${voffset -5}${color efefef}Films: ${alignr}${fs_free /media/Films}/${fs_size /media/Films}
+   
+${offset 10}${font Verdana:style=Bold}${color acc9dc}NET${font} ${hr 1}   
+${offset 10}${color}${font PizzaDude Bullets:size=16}${color acc9dc}v${font}${color efefef} UP: ${alignr}${upspeed eth0}
+${offset 10}${font PizzaDude Bullets:size=16}${color acc9dc}r${font}${color efefef}  Down: ${alignr}${downspeed eth0}
+${offset 10}${font PizzaDude Bullets:size=16}${color acc9dc}M${font}${color efefef}  Upload: ${alignr}${totalup eth0}
+${offset 10}${font PizzaDude Bullets:size=16}${color acc9dc}S${font}${color efefef}  Download: ${alignr}${totaldown eth0}
+${offset 10}${font PizzaDude Bullets:size=16}${color accd9c}A${font Verdana:size=10}${color efefef}  Mail citadeldimon: ${alignr}${execpi 300 bash  ~/.scripts/gmail1.sh}
+${offset 10}${font PizzaDude Bullets:size=16}${color accd9c}A${font Verdana:size=10}${color efefef}  Mail zikrach.dm: ${alignr}${execpi 300 bash  ~/.scripts/gmail2.sh}
