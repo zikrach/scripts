@@ -1,9 +1,13 @@
 #!/bin/sh
-fdate="$*"
-if [ ${#fdate} = 0 ]
-then
-   fdate=`date +%Y-%m-%d`
-fi
-#
-cat /var/log/pacman.log | grep -e $fdate | grep -e 'installed \| upgraded' | awk -F' ' '{print $5, $6, $7, $8 }'
+#FreeDNS updater script
 
+UPDATEURL="http://freedns.afraid.org/dynamic/update.php?VU9jbnk2MzFVMVVBQU1sS1Z2b0FBQUFCOjg4NTg4ODc="
+DOMAIN="zzk.pp.ua"
+
+registered=$(nslookup $DOMAIN|tail -n2|grep A|sed s/[^0-9.]//g)
+
+  current=$(wget -q -O - http://checkip.dyndns.org|sed s/[^0-9.]//g)
+       [ "$current" != "$registered" ] && {                           
+          wget -q -O /dev/null $UPDATEURL 
+          echo "DNS updated on:"; date
+  }

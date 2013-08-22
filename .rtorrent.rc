@@ -1,0 +1,73 @@
+#scgi_local = 127.0.0.1
+scgi_port = 127.0.0.1:33333
+
+#max_memory_usage = 268435456
+
+system.file_allocate.set = yes
+
+#done_fg_color = 2
+
+#done_bg_color = 0
+
+#active_fg_color = 4
+
+#active_bg_color = 0
+
+#максимальная скорость загрузки
+#download_rate = 450
+
+#максимальная скорость отдачи. 0 - не ограничена
+upload_rate = 100
+
+#каталог для сохранения закачек или откуда буду сидироваться торренты.
+directory = /media/Films/temp
+
+#каталог куда будет сохраняться состояние торрентов. Здесь, в этом примере, они сохраняются в папку session
+
+session = /home/dima/session
+#session = /home/z/Torrents/.session
+
+#rtorrent каждые 5 секунд проверяет этот каталог на новые *.torrent файлы и если они есть то ставит их на закачку
+
+schedule = watch_directory,5,60,load_start=/home/dima/Downloads/*.torrent
+
+#номер порта (или нескольких портов) который открывает клиент для обмена данными
+port_range = 12454-12454
+
+#случайный выбор порта для обмена данными. В данном случае он отключён
+port_random = yes
+
+#проверять хэш торрента после закачки
+check_hash = yes
+
+#использовать udp
+use_udp_trackers = yes
+
+#сохранять сессию
+session_save = yes
+
+encryption = allow_incoming,try_outgoing,enable_retry,prefer_plaintext
+
+dht = auto
+
+dht_port = 6881
+
+peer_exchange = yes
+
+#минимальное число пиров на торрент
+min_peers = 1
+
+#максимальное число пиров на торрент
+max_peers = 300
+
+#делает читадельным лог (вызывается по L)
+#handshake_log = yes
+
+# Принудительно устанавливает кодировку UTF-8 для xmlrpc.
+# Рекомендуется для устранения проблем при использовании в
+# наименованиях торрентов символов кириллицы. Актуально для
+# GUI, работающих через xmlrpc.
+encoding_list = UTF-8
+
+#
+#scgi_port = localhost:5000
