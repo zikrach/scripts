@@ -1,0 +1,47 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+xrdb -merge ~/.Xresources &
+pcmanfm --desktop --profile LXDE &
+#/usr/lib/notification-daemon-1.0/notification-daemon &
+#compton --config ~/.compton.conf -b
+#xcompmgr &
+tint2 &
+#clipit &
+numlockx &
+avant-window-navigator --startup &
+conky &
+#yakuake &
+xcalib -d :0 /usr/share/color/icc/dell_u2311h_custom.icc &
+xxkb &
+#xscreensaver -no-splash
+#sleep 3 && xterm -rv &
+sleep 6 && pytyle2 &
+#xterm -e debi_mount &
+sleep 7 && xflux -l 49.839683000000000000 -g 24.02971700000000500 &
+#sleep 27 && xmenud  -t &
+#sleep 30 && pidgin &
+sleep 90 && thunderbird &
+sleep 120 && sudo ntpd -qg  >/tmp/ntpd.log 2>/tmp/ntpd.error.log && sudo hwclock -w >/tmp/hwclock.log 2>/tmp/hwclock.error.log &
+#sleep 60 && deadbeef &
+#thunar --daemon &
+#sleep 15 && gvolwheel &
+#sleep 20 && gatotray &
+#sleep 30 && geany &
+
+#sleep 30 && VBoxHeadless -s "debi" &
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
