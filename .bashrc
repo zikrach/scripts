@@ -59,3 +59,5 @@ alias debi_mount='ssh dimon@192.168.1.10 mount /var/www/wiki/ && ssh dimon@192.1
 alias analyze='systemd-analyze'
 alias blame='systemd-analyze blame | head'
 
+alias pylint="pylint --rcfile=~/.pylintrc"
+alias pylint2="pylint2 --rcfile=~/.pylint2rc"
