@@ -5,7 +5,8 @@
 #
 
 xrdb -merge ~/.Xresources &
-pcmanfm --desktop --profile LXDE &
+stuurman-desktop &
+#pcmanfm --desktop --profile LXDE &
 #/usr/lib/notification-daemon-1.0/notification-daemon &
 #compton --config ~/.compton.conf -b
 #xcompmgr &

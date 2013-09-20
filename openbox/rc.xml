@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>rosa-elementary</name>
+    <name>Numix</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -120,13 +120,14 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Internet</name>
       <name>Terminal</name>
       <name>Geany</name>
       <name>Kile</name>
+      <name>Virtual Mashine</name>
     </names>
     <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -348,7 +349,7 @@
         <command>xterm -rv</command>
       </action>
     </keybind>
-        <keybind key="W-l">
+    <keybind key="W-l">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -411,13 +412,22 @@
         <command>/home/dima/bin/sopcast.sh</command>
       </action>
     </keybind>
-        <keybind key="C-A-t">
+    <keybind key="C-A-t">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>translate</name>
         </startupnotify>
         <command>/home/dima/bin/yandex_tr.sh</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-w">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>windows</name>
+        </startupnotify>
+        <command>/home/dima/bin/photoshop.sh</command>
       </action>
     </keybind>
   </keyboard>
@@ -768,7 +778,7 @@
   <!-- show the manage desktops section in the client-list-(combined-)menu -->
 </menu>
   <applications>
-<!--
+    <!--
 
     <application name="xterm">
       <desktop>2</desktop>
@@ -783,7 +793,6 @@
     </application>
 
 -->
-
     <application name="geany">
       <desktop>3</desktop>
       <shade>no</shade>

@@ -61,3 +61,6 @@ alias blame='systemd-analyze blame | head'
 
 alias pylint="pylint --rcfile=~/.pylintrc"
 alias pylint2="pylint2 --rcfile=~/.pylint2rc"
+
+alias env3='source ~/python/virtualenv/python3.3/bin/activate'
+alias env2='source ~/python/virtualenv/python2.7/bin/activate && cd ~/python/virtualenv/python2.7/~'
