@@ -430,6 +430,15 @@
         <command>/home/dima/bin/photoshop.sh</command>
       </action>
     </keybind>
+    <keybind key="W-Print">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>windows</name>
+        </startupnotify>
+        <command>/home/dima/bin/imgur.py</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
