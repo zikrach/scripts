@@ -42,14 +42,14 @@
 
     # -- Text settings -- #
     use_xft yes
-    xftfont MaiandraGD:size=24
+    xftfont MaiandraGD:size=16
     xftalpha 0.4
 
     uppercase no
 
     default_color 8b8b8b
 
-xftfont verdana:size=10
+xftfont verdana:size=9
 alignment top_right
 gap_x 20
 gap_y 30
@@ -75,10 +75,10 @@ color8 DarkSlateGray
 color9 Black
 
          TEXT
-${font Ubuntu:size=54:weight=bold}${color efefef}${alignc 2}${time %H}:${time %M}
-${voffset -20}${offset 20}${font Ubuntu:size=48:weight=normal}${color efefef}${time %d}
-${offset 100}${voffset -100}${font Ubuntu:size=20:weight=normal}${color efefef}${time %A}
-${offset 100}${voffset -5}${font Ubuntu:size=20:weight=bold}${color efefef}${time %B}
+${font Ubuntu:size=50:weight=bold}${color efefef}${alignc 2}${time %H}:${time %M}
+${voffset -20}${offset 20}${font Ubuntu:size=44:weight=normal}${color efefef}${time %d}
+${offset 100}${voffset -100}${font Ubuntu:size=18:weight=normal}${color efefef}${time %A}
+${offset 100}${voffset -5}${font Ubuntu:size=18:weight=bold}${color efefef}${time %B}
 ${voffset -15}${font LiberationSans:size=8}${color efefef}${alignc 5}Sunrise${offset 1}${execi 600 conkyForecast --location=UPXX0017 --datatype=SR --startday=1}${color efefef}${offset 2}|${offset 2}${color efefef}Sunset${offset 1}${execi 600 conkyForecast --location=UPXX0017 --datatype=SS --startday=1}
 ##################
 ##   WEATHER    ##
