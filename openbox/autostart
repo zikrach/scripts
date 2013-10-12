@@ -10,10 +10,13 @@ stuurman-desktop &
 #/usr/lib/notification-daemon-1.0/notification-daemon &
 #compton --config ~/.compton.conf -b
 #xcompmgr &
+/home/dima/bin/openbox_menu.sh &
 tint2 &
 #clipit &
 numlockx &
-avant-window-navigator --startup &
+#waterline &
+docky &
+#avant-window-navigator --startup &
 conky &
 #yakuake &
 xcalib -d :0 /usr/share/color/icc/dell_u2311h_custom.icc &
@@ -32,6 +35,7 @@ sleep 120 && sudo ntpd -qg  >/tmp/ntpd.log 2>/tmp/ntpd.error.log && sudo hwclock
 #sleep 15 && gvolwheel &
 #sleep 20 && gatotray &
 #sleep 30 && geany &
+sleep 240 && skype &
 
 #sleep 30 && VBoxHeadless -s "debi" &
 

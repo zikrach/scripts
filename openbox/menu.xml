@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu>
-<menu execute="obm-xdg" id="xdg-menu" label="Apps"/>
+<!--<menu execute="obm-xdg" id="xdg-menu" label="Apps"/>-->
 	<menu id="root-menu" label="OpenBox 3">
-<menu id="xdg-menu"/>
+<!--<menu id="xdg-menu"/>
 <separator/>
+<menu id="xdg-menu" label="XDG Menu" execute="cat /var/cache/xdg-menu/openbox/menu.xml"/>-->
+<menu id="apps-menu" label="Apps" execute="cat /home/dima/.config/openbox/openbox_menu.xml"/>
 <menu id="devices" label="Devices" execute="/usr/bin/obdevicemenu" />
 <separator/>
 		<menu id="40" label="OpenBox">
