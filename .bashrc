@@ -14,6 +14,18 @@ PS2='> '
 PS3='> '
 PS4='+ '
 
+
+
+#Чтобы одинаковые команды не сохранялись в истории, добавьте строчку:
+HISTCONTROL=ignoredups
+#Не добавлять запись в историю команд, если команда начинается с пробела:
+HISTCONTROL=ignorespace
+#стираются все повторения, в том числе идущие не подряд, но в разной последовательности. (например, после cd..ls..cd..ls останется cd и ls)
+HISTCONTROL=erasedups
+# Чтобы история команд сохранялась сразу после ввода (а не во время закрытия терминала)
+shopt -s histappend
+PROMPT_COMMAND='history -a' 
+
 case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
     PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
@@ -51,10 +63,10 @@ alias torrent_stop='sudo systemctl stop rtorrent.path rtorrent.service nginx.ser
 alias startXP="xinit /usr/bin/VirtualBox --startvm \"xp\" --fullscreen -- /usr/bin/Xorg :1"
 alias samba_start='sudo systemctl start smbd.service nmbd.service'
 alias samba_stop='sudo systemctl stop smbd.service nmbd.service'
-alias stop='sudo systemctl stop'
-alias start='sudo systemctl start'
-alias restart='sudo systemctl restart'
-alias status='systemctl status'
+alias stop=' sudo systemctl stop'
+alias start=' sudo systemctl start'
+alias restart=' sudo systemctl restart'
+alias status=' systemctl status'
 alias debi_mount='ssh dimon@192.168.1.10 mount /var/www/wiki/ && ssh dimon@192.168.1.10 mount /media/katty_home/ && ssh dimon@192.168.1.10 mount /media/Download/'
 alias analyze='systemd-analyze'
 alias blame='systemd-analyze blame | head'
