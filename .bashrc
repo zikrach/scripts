@@ -76,3 +76,6 @@ alias pylint2="pylint2 --rcfile=~/.pylint2rc"
 
 alias env3='source ~/python/virtualenv/python3.3/bin/activate'
 alias env2='source ~/python/virtualenv/python2.7/bin/activate && cd ~/python/virtualenv/python2.7/~'
+alias chysel_methods_env='source ~/python/chysel_methods/bin/activate && cd ~/python/chysel_methods/~'
+alias pyramid_env='source ~/python/pyramid/bin/activate && cd ~/python/pyramid/~'
+export PATH=$PATH:/home/dima/domino #added by domino

@@ -17,5 +17,8 @@
 			<item label="Exit">
 				<action name="Exit"/>
 			</item>
-	</menu></menu>
+	</menu>
+   <separator/>
+  <item label="Quit" execute="/usr/bin/oblogout" /> 
+    </menu>
 </openbox_menu>

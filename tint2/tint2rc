@@ -24,7 +24,7 @@ border_color = #FFFFFF 40
 # Panel
 panel_items = STBGCL
 panel_monitor = all
-panel_position = bottom center horizontal
+panel_position = top center horizontal
 panel_size = 100% 26
 panel_margin = 0 0
 panel_padding = 10 0 8
@@ -40,7 +40,7 @@ launcher_background_id = 2
 launcher_icon_size = 24
 #launcher_item_app = /usr/share/applications/xmenud.desktop
 launcher_item_app =  /usr/share/applications/change.desktop
-launcher_item_app = /usr/share/applications/lxtask.desktop
+#launcher_item_app = /usr/share/applications/lxtask.desktop
 #launcher_item_app = /usr/share/applications/reboot.desktop
 launcher_item_app = /usr/share/applications/shutdown.desktop
 
