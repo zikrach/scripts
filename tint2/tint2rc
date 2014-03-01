@@ -4,56 +4,77 @@
 
 # Background definitions
 # ID 1
-rounded = 2
+rounded = 0
 border_width = 0
-background_color = #000000 40
-border_color = #FFFFFF 10
+background_color = #222222 40
+border_color = #000000 45
 
 # ID 2
-rounded = 4
-border_width = 0
-background_color = #ffffff 20
-border_color = #FFFFFF 20
-
-# ID 3
-rounded = 4
-border_width = 0
-background_color = #FFFFFF 40
+rounded = 1
+border_width = 1
+background_color = #888888 60
 border_color = #FFFFFF 40
 
+# ID 3
+rounded = 1
+border_width = 1
+background_color = #888888 20
+border_color = #FFFFFF 20
+
+# ID 4
+rounded = 1
+border_width = 1
+background_color = #888888 20
+border_color = #ED2323 60
+
+# ID 5
+rounded = 2
+border_width = 1
+background_color = #222222 40
+border_color = #FFFFFF 20
+
+# ID 6
+rounded = 1
+border_width = 1
+background_color = #222222 60
+border_color = #FFFFFF 50
+
+# ID 7
+rounded = 1
+border_width = 1
+background_color = #222222 48
+border_color = #FFFFFF 40
+
+# ID 8
+rounded = 1
+border_width = 1
+background_color = #888888 20
+border_color = #888888 20
+
 # Panel
-panel_items = STBGCL
+panel_items = LTGSC
 panel_monitor = all
-panel_position = top center horizontal
-panel_size = 100% 26
+panel_position = bottom center horizontal
+#anel_items = LTSC
+panel_size = 98% 36
 panel_margin = 0 0
-panel_padding = 10 0 8
+panel_padding = 6 2 4
 panel_dock = 0
 wm_menu = 1
-panel_layer = normal
+panel_layer = bottom
 panel_background_id = 1
 
-# Launchers
-launcher_icon_theme = LinuxLex-8
-launcher_padding = 5 0 10
-launcher_background_id = 2
-launcher_icon_size = 24
-#launcher_item_app = /usr/share/applications/xmenud.desktop
-launcher_item_app =  /usr/share/applications/change.desktop
-#launcher_item_app = /usr/share/applications/lxtask.desktop
-#launcher_item_app = /usr/share/applications/reboot.desktop
-launcher_item_app = /usr/share/applications/shutdown.desktop
 
 # Panel Autohide
 autohide = 0
-autohide_show_timeout = 0.5
-autohide_hide_timeout = 0.5
-autohide_height = 4
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 1.5
+autohide_height = 0
 strut_policy = follow_size
 
 # Graphs
 graphs_items = CMN
-graphs_use_bars = 0
+graphs_use_bars = 1
 graphs_graph_width = 50
 graphs_netiface = eth0
 graphs_color0 = #FF3333 100
@@ -63,69 +84,84 @@ graphs_color3 = #7777FF  60
 graphs_color4 = #00FF00 100
 graphs_color5 = #00FF00  60
 graphs_padding = 10 2 6
-graphs_background_id = 2
+graphs_background_id = 5
 graphs_lclick_command = xterm -rv -geometry 140x59 -e htop
 
 # Taskbar
-taskbar_mode = multi_desktop
 #taskbar_mode = single_desktop
-taskbar_padding = 2 1 2
-taskbar_background_id = 1
-taskbar_active_background_id = 0
+taskbar_mode = multi_desktop
+taskbar_padding = 6 0 6
+taskbar_background_id = 5
+taskbar_active_background_id = 6
+taskbar_name = 0
+taskbar_name_background_id = 0
+taskbar_name_active_background_id = 0
+taskbar_name_font = Ubuntu 10
+taskbar_name_font_color = #9F9F9F 100
+taskbar_name_active_font_color = #FFFFFF 100
 
 # Tasks
-urgent_nb_of_blink = 8
+urgent_nb_of_blink = 20
 task_icon = 1
-task_text = 1
+task_text = 0
 task_centered = 1
-task_maximum_size = 140 35
+task_maximum_size = 40 40
 task_padding = 6 3
 task_background_id = 3
 task_active_background_id = 2
-task_urgent_background_id = 0
+task_urgent_background_id = 4
 task_iconified_background_id = 0
 
 # Task Icons
-task_icon_asb = 100 0 0
+task_icon_asb = 90 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 100 0 0
+task_iconified_icon_asb = 90 0 0
 
 # Fonts
-task_font = PT Sans Caption 10
-task_font_color = #FFFFFF 61
-task_active_font_color = #FFFFFF 80
-task_urgent_font_color = #FFFFFF 100
-task_iconified_font_color = #FFFFFF 100
+#task_font = kroeger 06_55 6
+task_font = Tahoma 8
+task_font_color = #222222 100
+task_active_font_color = #000000 100
+task_urgent_font_color = #000000 100
+task_iconified_font_color = #222222 100
 font_shadow = 0
+
 
 # System Tray
 systray = 1
-systray_padding = 0 4 5
+systray_padding = 4 4 5
 systray_sort = ascending
 systray_background_id = 0
-systray_icon_size = 0
+systray_icon_size = 20
 systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = PT Sans Caption 9
-time2_format = %d %B
-time2_font = PT Sans Caption 6
-clock_font_color = #FFFFFF 67
-clock_padding = 1 0
+time1_font = Aller Bold 11
+time2_format = %a %d %b
+time2_font = Ubuntu 6
+clock_font_color = #FFFFFF 100
+clock_padding = 2 0
 clock_background_id = 0
 clock_lclick_command = gsimplecal
-clock_rclick_command = orage
+clock_rclick_command = oblogout
 
 # Tooltips
-tooltip = 0
-tooltip_padding = 2 2
-tooltip_show_timeout = 0.7
+tooltip = 1
+tooltip_padding = 4 2
+tooltip_show_timeout = 0.3
 tooltip_hide_timeout = 0.3
+tooltip_background_id = 7
+tooltip_font = sans normal 8.5
+tooltip_font_color = #FFFFFF 70
+
+tooltip_padding = 2 2
+tooltip_show_timeout = 0.0
+tooltip_hide_timeout = 0.0
 tooltip_background_id = 1
-tooltip_font = sans 10
-tooltip_font_color = #FFFFFF 80
+tooltip_font_color = #FFFFFF 70
+tooltip_font = sans normal 7.5
 
 # Mouse
 mouse_middle = none
@@ -143,5 +179,37 @@ bat2_font = sans 6
 battery_font_color = #FFFFFF 67
 battery_padding = 1 0
 battery_background_id = 0
+
+
+
+# Launchers
+launcher_icon_theme = Numix
+launcher_padding = 2 1 2
+launcher_background_id = 0
+#launcher_icon_size = 24
+launcher_item_app = /usr/share/applications/xmenud.desktop
+#launcher_item_app =  /usr/share/applications/change.desktop
+#launcher_item_app = /usr/share/applications/lxtask.desktop
+#launcher_item_app = /usr/share/applications/reboot.desktop
+launcher_item_app = /usr/share/applications/stuurman.desktop
+launcher_item_app = /usr/share/applications/thunar.desktop
+launcher_item_app = /usr/share/applications/firefox.desktop
+launcher_item_app = /usr/share/applications/chromium.desktop
+launcher_item_app = /usr/share/applications/luakit.desktop
+launcher_item_app = /usr/share/applications/midori.desktop
+launcher_item_app = /usr/share/applications/thunderbird.desktop
+launcher_item_app = /usr/share/applications/psi.desktop
+launcher_item_app = /usr/share/applications/vlc.desktop
+launcher_item_app = /usr/share/applications/deadbeef.desktop
+launcher_item_app = /usr/share/applications/kde4/kile.desktop
+launcher_item_app = /usr/share/applications/leafpad.desktop
+launcher_item_app = /usr/share/applications/geany.desktop
+launcher_item_app = /usr/share/applications/pycharm.desktop
+launcher_item_app = /usr/share/applications/sublime-text.desktop
+launcher_item_app = /usr/share/applications/qalculate-gtk.desktop
+launcher_item_app = /usr/share/applications/lilyterm.desktop
+launcher_item_app = /usr/share/applications/virtualbox.desktop
+launcher_item_app = /usr/share/applications/shutdown.desktop
+
 
 # End of config

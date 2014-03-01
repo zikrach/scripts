@@ -8,7 +8,9 @@ export EDITOR="/usr/bin/nano"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\[\e[0;33m\]╔══\[\e[1;35m\] \t \[\e[0;33m\]══>\[\033[01;34m\] \w \n\e[0;33m╚═══> \[\033[01;32m\]\u\[\e[1;35m\]@\[\e[1;31m\]\H\[\033[01;34m\] \$\[\033[00m\] '
+
+PS1='\n \[\e[1;37m\]┌─[\[\e[1;36m\] \d, \[\e[1;31m\] \t \[\e[1;37m\]] \[\e[1;32m\]\w  \n\[\e[1;37m\] └─ \[\033[01;32m\]\u\[\e[1;35m\]@\[\e[1;31m\]\H\[\033[01;34m\] \[\e[1;35m\] ---> \[\e[0;37m\] '
+#PS1='\[\e[0;33m\]╔══\[\e[1;35m\] \t \[\e[0;33m\]══>\[\033[01;34m\] \w \n\e[0;33m╚═══> \[\033[01;32m\]\u\[\e[1;35m\]@\[\e[1;31m\]\H\[\033[01;34m\] \$\[\033[00m\] '
 #PS1='[\u@\h \W]\$ '
 PS2='> '
 PS3='> '
@@ -74,7 +76,10 @@ alias blame='systemd-analyze blame | head'
 alias pylint="pylint --rcfile=~/.pylintrc"
 alias pylint2="pylint2 --rcfile=~/.pylint2rc"
 
+alias pip-upgrade="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
+
 alias env3='source ~/python/virtualenv/python3.3/bin/activate'
+alias env_django3='source ~/python/virtualenv/django3/bin/activate'
 alias env2='source ~/python/virtualenv/python2.7/bin/activate && cd ~/python/virtualenv/python2.7/~'
 alias chysel_methods_env='source ~/python/chysel_methods/bin/activate && cd ~/python/chysel_methods/~'
 alias pyramid_env='source ~/python/pyramid/bin/activate && cd ~/python/pyramid/~'
@@ -94,3 +99,5 @@ function $function_name {
 }"
     eval "$function"
 }
+export PATH=$PATH:/home/dima/domino #added by domino
+export PATH=$PATH:/home/dima/.gem/ruby/2.1.0/bin #added by rhc
